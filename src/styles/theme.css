@@ -1,0 +1,174 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Gothic Light Mode - Ivory/Off-white */
+  --background: #F5F1E8;
+  --foreground: #0B0B0C;
+  --card: #EAE6DF;
+  --card-foreground: #0B0B0C;
+  --popover: #F5F1E8;
+  --popover-foreground: #0B0B0C;
+  --primary: #8B0000;
+  --primary-foreground: #F5F1E8;
+  --secondary: #C0C0C0;
+  --secondary-foreground: #0B0B0C;
+  --muted: #EAE6DF;
+  --muted-foreground: #1A1A1D;
+  --accent: #C1121F;
+  --accent-foreground: #F5F1E8;
+  --destructive: #C1121F;
+  --destructive-foreground: #F5F1E8;
+  --border: #8B0000;
+  --input: #EAE6DF;
+  --input-background: #EAE6DF;
+  --switch-background: #C0C0C0;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #C1121F;
+  
+  /* Gothic specific colors */
+  --gothic-dark-red: #8B0000;
+  --gothic-bright-red: #C1121F;
+  --gothic-glow-red: #FF2A2A;
+  --gothic-black: #0B0B0C;
+  --gothic-dark-gray: #1A1A1D;
+  --gothic-ivory: #F5F1E8;
+  --gothic-white: #EAE6DF;
+  --gothic-silver: #C0C0C0;
+  
+  --radius: 0rem;
+}
+
+.dark {
+  /* Gothic Dark Mode - Deep Black */
+  --background: #0B0B0C;
+  --foreground: #F5F1E8;
+  --card: #1A1A1D;
+  --card-foreground: #F5F1E8;
+  --popover: #0B0B0C;
+  --popover-foreground: #F5F1E8;
+  --primary: #C1121F;
+  --primary-foreground: #F5F1E8;
+  --secondary: #1A1A1D;
+  --secondary-foreground: #C1121F;
+  --muted: #1A1A1D;
+  --muted-foreground: #C0C0C0;
+  --accent: #FF2A2A;
+  --accent-foreground: #0B0B0C;
+  --destructive: #FF2A2A;
+  --destructive-foreground: #0B0B0C;
+  --border: #C1121F;
+  --input: #1A1A1D;
+  --ring: #FF2A2A;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  /* Global Cursor - Light Mode (Default) */
+  body {
+    @apply bg-background text-foreground;
+    cursor: url('/cat-cursor.svg') 16 16, auto;
+  }
+
+  a, button, [role="button"], .cursor-pointer {
+    cursor: url('/cat-cursor.svg') 16 16, pointer;
+  }
+
+  /* Global Cursor - Dark Mode */
+  .dark body {
+    cursor: url('/cat-cursor-white.svg') 16 16, auto;
+  }
+
+  .dark a, .dark button, .dark [role="button"], .dark .cursor-pointer {
+    cursor: url('/cat-cursor-white.svg') 16 16, pointer;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
