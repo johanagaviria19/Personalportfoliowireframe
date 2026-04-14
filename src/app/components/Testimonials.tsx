@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { CornerOrnament, DividerOrnament, GothicCross, BatOrnament } from "./gothic/GothicOrnaments";
 
 const initialTestimonials = [
@@ -277,10 +278,10 @@ export function Testimonials() {
           </div>
         </div>
         
-        {/* Secondary CTA section with cathedral arch style */}
+        {/* Contact Business Card section */}
         <div className="mt-24 lg:mt-32">
           <div className="max-w-3xl mx-auto">
-            <div className="relative p-12 lg:p-16 border-4 border-primary bg-primary/95"
+            <div className="relative p-12 lg:p-16 border-4 border-primary bg-primary"
                  style={{ boxShadow: '0 0 60px rgba(193, 18, 31, 0.4)' }}>
               {/* Top ornament */}
               <div className="absolute -top-8 left-1/2 -translate-x-1/2">
@@ -296,25 +297,65 @@ export function Testimonials() {
               {/* Inner border */}
               <div className="absolute inset-8 border-2 border-primary-foreground/20"></div>
               
-              <div className="relative z-10 space-y-8 text-center">
-                <div className="space-y-3 mx-auto max-w-md" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
-                  <div className="w-full h-1.5 bg-primary-foreground mx-auto"></div>
-                  <div className="w-4/5 h-1.5 bg-primary-foreground/70 mx-auto"></div>
+              <div className="relative z-10 space-y-8 text-center text-primary-foreground">
+                <div className="space-y-4">
+                  <h3 className="text-3xl lg:text-4xl font-black uppercase tracking-[0.2em]" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
+                    Johana Catalina
+                  </h3>
+                  <div className="flex items-center justify-center gap-4">
+                    <div className="w-12 h-0.5 bg-primary-foreground/60"></div>
+                    <p className="text-sm font-bold uppercase tracking-[0.3em] opacity-80">Software Engineer</p>
+                    <div className="w-12 h-0.5 bg-primary-foreground/60"></div>
+                  </div>
                 </div>
                 
                 <DividerOrnament className="mx-auto text-primary-foreground/50" />
                 
-                <div className="space-y-2 mx-auto max-w-lg" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  <div className="w-full h-px bg-primary-foreground/40 mx-auto"></div>
-                  <div className="w-5/6 h-px bg-primary-foreground/40 mx-auto"></div>
+                {/* Contact Grid */}
+                <div className="grid md:grid-cols-2 gap-8 max-w-lg mx-auto pt-4" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                  <div className="space-y-3 group/contact">
+                    <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Manda un cuervo</p>
+                    <a href="mailto:johanagaviria19@gmail.com" className="flex items-center justify-center gap-3 text-sm font-bold hover:text-background transition-colors duration-300">
+                      <Mail size={16} className="text-primary-foreground/70 group-hover/contact:text-background" />
+                      johanagaviria19@gmail.com
+                    </a>
+                  </div>
+                  <div className="space-y-3 group/contact">
+                    <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Red Profesional</p>
+                    <a href="https://linkedin.com/in/johanagaviria19" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 text-sm font-bold hover:text-background transition-colors duration-300">
+                      <Linkedin size={16} className="text-primary-foreground/70 group-hover/contact:text-background" />
+                      LinkedIn/johanagaviria19
+                    </a>
+                  </div>
+                  <div className="space-y-3 group/contact">
+                    <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Repositorios</p>
+                    <a href="https://github.com/johanagaviria19" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 text-sm font-bold hover:text-background transition-colors duration-300">
+                      <Github size={16} className="text-primary-foreground/70 group-hover/contact:text-background" />
+                      GitHub/johanagaviria19
+                    </a>
+                  </div>
+                  <div className="space-y-3 group/contact">
+                    <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Llamada Directa</p>
+                    <a href="tel:+573000000000" className="flex items-center justify-center gap-3 text-sm font-bold hover:text-background transition-colors duration-300">
+                      <Phone size={16} className="text-primary-foreground/70 group-hover/contact:text-background" />
+                      +57 300 000 0000
+                    </a>
+                  </div>
+                  <div className="space-y-3 group/contact">
+                    <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Ubicación</p>
+                    <div className="flex items-center justify-center gap-3 text-sm font-bold">
+                      <MapPin size={16} className="text-primary-foreground/70" />
+                      Medellín, Colombia
+                    </div>
+                  </div>
                 </div>
-                
-                <button className="relative w-56 h-14 border-2 border-primary-foreground bg-primary-foreground hover:bg-background text-primary transition-all duration-300 mx-auto group overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-                  <div className="relative z-10 w-32 h-1 bg-primary mx-auto"></div>
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style={{ boxShadow: '0 0 30px rgba(193, 18, 31, 0.6)' }}></div>
-                </button>
+
+                <div className="pt-8">
+                  <button className="relative px-10 py-4 border-2 border-primary-foreground bg-primary-foreground text-primary font-black uppercase tracking-[0.2em] text-xs hover:bg-transparent hover:text-primary-foreground transition-all duration-300 group overflow-hidden">
+                    <span className="relative z-10">Descargar CV</span>
+                    <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
