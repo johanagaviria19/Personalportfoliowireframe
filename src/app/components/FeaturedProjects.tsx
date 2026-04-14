@@ -1,5 +1,37 @@
 import { CornerOrnament, DividerOrnament, GothicCross } from "./gothic/GothicOrnaments";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Github } from "lucide-react";
+
+const secondaryProjects = [
+  {
+    title: "Procesador de Imágenes",
+    description: "Servicio serverless en AWS que automatiza la conversión de imágenes a blanco y negro y la protección de contenido mediante marcas de agua.",
+    tech: ["AWS S3", "Lambda", "Pillow"],
+    image: "/aws.png",
+    github: "http://app-frontend-johana.s3-website-us-east-1.amazonaws.com/"
+  },
+  {
+    title: "Cripta de Datos",
+    description: "Dashboard de analítica avanzada con visualizaciones en tiempo real y arquitectura escalable.",
+    tech: ["React", "D3.js", "Node.js"],
+    image: "https://images.unsplash.com/photo-1551288049-bbdac8626ad1?q=80&w=1000&auto=format&fit=crop",
+    github: "https://github.com/johanagaviria19/data-crypt"
+  },
+  {
+    title: "Santuario Social",
+    description: "Red social minimalista enfocada en la privacidad y la conexión entre artistas digitales.",
+    tech: ["TypeScript", "Express", "MongoDB"],
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop",
+    github: "https://github.com/johanagaviria19/social-sanctuary"
+  },
+  {
+    title: "Grimorio de API",
+    description: "Documentación interactiva para APIs REST con diseño inmersivo y explorador de endpoints.",
+    tech: ["Astro", "MDX", "Swagger"],
+    image: "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1000&auto=format&fit=crop",
+    github: "https://github.com/johanagaviria19/api-grimoire"
+  }
+];
 
 export function FeaturedProjects() {
   return (
@@ -100,143 +132,54 @@ export function FeaturedProjects() {
         
         {/* Grid of projects with decorative cards */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-          {/* Project Card 1 */}
-          <div className="group cursor-pointer">
-            <div className="relative mb-6">
-              <div className="relative w-full aspect-[4/3] border-2 border-primary/40 bg-card/50 group-hover:border-primary transition-all duration-300">
-                <CornerOrnament position="top-left" className="absolute top-1 left-1 text-primary/30 w-8 h-8" />
-                <CornerOrnament position="bottom-right" className="absolute bottom-1 right-1 text-primary/30 w-8 h-8" />
-                <div className="absolute inset-4 border border-primary/20 group-hover:border-primary/40 transition-all duration-300"></div>
-                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                   style={{ boxShadow: '0 0 30px rgba(193, 18, 31, 0.3)' }}></div>
-            </div>
-            <div className="space-y-4">
-              <div className="space-y-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-                <div className="w-3/4 h-0.5 bg-primary"></div>
-                <div className="w-1/2 h-0.5 bg-primary/60"></div>
-              </div>
-              <div className="space-y-2" style={{ fontFamily: "'Inter', sans-serif" }}>
-                <div className="w-full h-px bg-foreground/20"></div>
-                <div className="w-5/6 h-px bg-foreground/20"></div>
-              </div>
-              <div className="flex gap-2">
-                <div className="px-3 py-1.5 border border-primary/40 text-xs">
-                  <div className="w-12 h-px bg-foreground/40"></div>
+          {secondaryProjects.map((project, index) => (
+            <div key={index} className="group cursor-pointer">
+              <div className="relative mb-6">
+                <div className="relative w-full aspect-[4/3] border-2 border-primary/40 bg-card/50 group-hover:border-primary transition-all duration-300 overflow-hidden">
+                  <ImageWithFallback 
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 opacity-40 group-hover:opacity-60 transition-all duration-500"
+                  />
+                  <CornerOrnament position="top-left" className="absolute top-1 left-1 text-primary/30 w-8 h-8" />
+                  <CornerOrnament position="bottom-right" className="absolute bottom-1 right-1 text-primary/30 w-8 h-8" />
+                  <div className="absolute inset-4 border border-primary/20 group-hover:border-primary/40 transition-all duration-300 pointer-events-none"></div>
+                  
+                  {/* GitHub Button on Hover */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="p-4 border-2 border-primary bg-background/90 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                    >
+                      <Github size={24} />
+                    </a>
+                  </div>
                 </div>
-                <div className="px-3 py-1.5 border border-primary/40 text-xs">
-                  <div className="w-16 h-px bg-foreground/40"></div>
-                </div>
-                <div className="px-3 py-1.5 border border-primary/40 text-xs">
-                  <div className="w-12 h-px bg-foreground/40"></div>
-                </div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                     style={{ boxShadow: '0 0 30px rgba(193, 18, 31, 0.3)' }}></div>
               </div>
-            </div>
-          </div>
-          
-          {/* Project Card 2 - Alternate style */}
-          <div className="group cursor-pointer">
-            <div className="relative mb-6">
-              <div className="relative w-full aspect-[4/3] border-4 border-primary bg-background group-hover:bg-card transition-all duration-300">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <GothicCross className="text-primary/20 group-hover:text-primary/40 transition-colors duration-300" />
+              <div className="space-y-4">
+                <div className="space-y-1" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
+                  <h4 className="text-xl font-black text-foreground uppercase tracking-tight group-hover:text-primary transition-colors duration-300">
+                    {project.title}
+                  </h4>
+                  <div className="w-1/2 h-0.5 bg-primary/40"></div>
                 </div>
-                <div className="absolute inset-6 border-2 border-primary/30"></div>
-              </div>
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                   style={{ boxShadow: '0 0 30px rgba(193, 18, 31, 0.3)' }}></div>
-            </div>
-            <div className="space-y-4">
-              <div className="space-y-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-                <div className="w-3/4 h-0.5 bg-primary"></div>
-                <div className="w-1/2 h-0.5 bg-primary/60"></div>
-              </div>
-              <div className="space-y-2" style={{ fontFamily: "'Inter', sans-serif" }}>
-                <div className="w-full h-px bg-foreground/20"></div>
-                <div className="w-5/6 h-px bg-foreground/20"></div>
-              </div>
-              <div className="flex gap-2">
-                <div className="px-3 py-1.5 border border-primary/40">
-                  <div className="w-12 h-px bg-foreground/40"></div>
+                <div className="text-xs text-foreground/60 leading-relaxed line-clamp-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  {project.description}
                 </div>
-                <div className="px-3 py-1.5 border border-primary/40">
-                  <div className="w-16 h-px bg-foreground/40"></div>
+                <div className="flex gap-2 flex-wrap">
+                  {project.tech.map((tag) => (
+                    <span key={tag} className="px-2 py-1 border border-primary/20 text-[9px] font-bold tracking-widest uppercase text-foreground/40 group-hover:border-primary/40 group-hover:text-primary transition-all duration-300">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
-          </div>
-          
-          {/* Project Card 3 */}
-          <div className="group cursor-pointer">
-            <div className="relative mb-6">
-              <div className="relative w-full aspect-[4/3] border-2 border-primary bg-primary/5 group-hover:bg-primary/10 transition-all duration-300">
-                <CornerOrnament position="top-right" className="absolute top-1 right-1 text-primary/30 w-8 h-8" />
-                <CornerOrnament position="bottom-left" className="absolute bottom-1 left-1 text-primary/30 w-8 h-8" />
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                     style={{ boxShadow: 'inset 0 0 40px rgba(193, 18, 31, 0.2)' }}></div>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="space-y-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-                <div className="w-3/4 h-0.5 bg-primary"></div>
-                <div className="w-1/2 h-0.5 bg-primary/60"></div>
-              </div>
-              <div className="space-y-2" style={{ fontFamily: "'Inter', sans-serif" }}>
-                <div className="w-full h-px bg-foreground/20"></div>
-                <div className="w-5/6 h-px bg-foreground/20"></div>
-              </div>
-              <div className="flex gap-2">
-                <div className="px-3 py-1.5 border border-primary/40">
-                  <div className="w-16 h-px bg-foreground/40"></div>
-                </div>
-                <div className="px-3 py-1.5 border border-primary/40">
-                  <div className="w-12 h-px bg-foreground/40"></div>
-                </div>
-                <div className="px-3 py-1.5 border border-primary/40">
-                  <div className="w-20 h-px bg-foreground/40"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Project Card 4 */}
-          <div className="group cursor-pointer">
-            <div className="relative mb-6">
-              <div className="relative w-full aspect-[4/3] border-2 border-primary/40 bg-card group-hover:border-accent transition-all duration-300">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-24 h-24 border-2 border-primary/20 rotate-45 group-hover:border-primary/40 group-hover:scale-110 transition-all duration-300"></div>
-                </div>
-                <CornerOrnament position="top-left" className="absolute top-1 left-1 text-primary/20 w-6 h-6" />
-                <CornerOrnament position="top-right" className="absolute top-1 right-1 text-primary/20 w-6 h-6" />
-                <CornerOrnament position="bottom-left" className="absolute bottom-1 left-1 text-primary/20 w-6 h-6" />
-                <CornerOrnament position="bottom-right" className="absolute bottom-1 right-1 text-primary/20 w-6 h-6" />
-              </div>
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                   style={{ boxShadow: '0 0 30px rgba(255, 42, 42, 0.25)' }}></div>
-            </div>
-            <div className="space-y-4">
-              <div className="space-y-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-                <div className="w-3/4 h-0.5 bg-primary"></div>
-                <div className="w-1/2 h-0.5 bg-primary/60"></div>
-              </div>
-              <div className="space-y-2" style={{ fontFamily: "'Inter', sans-serif" }}>
-                <div className="w-full h-px bg-foreground/20"></div>
-                <div className="w-5/6 h-px bg-foreground/20"></div>
-              </div>
-              <div className="flex gap-2">
-                <div className="px-3 py-1.5 border border-primary/40">
-                  <div className="w-12 h-px bg-foreground/40"></div>
-                </div>
-                <div className="px-3 py-1.5 border border-primary/40">
-                  <div className="w-16 h-px bg-foreground/40"></div>
-                </div>
-                <div className="px-3 py-1.5 border border-primary/40">
-                  <div className="w-14 h-px bg-foreground/40"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
