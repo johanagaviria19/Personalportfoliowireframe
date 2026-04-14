@@ -32,15 +32,6 @@ export function Navigation() {
           </div>
           
           <div className="flex items-center gap-6">
-            {/* CTA button */}
-            <div className="hidden md:block">
-              <a href="#testimonials" className="relative block px-6 py-2 border border-primary text-[10px] font-bold uppercase tracking-widest hover:bg-primary hover:text-primary-foreground transition-all duration-300 group overflow-hidden text-center">
-                <span className="relative z-10">Contratar</span>
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                     style={{ boxShadow: '0 0 20px rgba(193, 18, 31, 0.4)' }}></div>
-              </a>
-            </div>
-            
             {/* Theme toggle */}
             <ThemeToggle />
           </div>

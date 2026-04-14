@@ -43,27 +43,21 @@ export function Skills() {
                 </h3>
               </div>
               
-              {/* Skill bars with gothic decoration */}
-              <div className="space-y-8 relative">
+              {/* Skill list without bars */}
+              <div className="space-y-6 relative pt-4">
                 {[
-                  { name: "Desarrollo Web (HTML/CSS/JS)", level: "95%" },
-                  { name: "Frameworks (React/Next.js)", level: "90%" },
-                  { name: "Diseño UI/UX", level: "85%" },
-                  { name: "Prototipado (Figma)", level: "90%" },
-                  { name: "Control de versiones (Git)", level: "80%" },
-                  { name: "Diseño Visual & Branding", level: "85%" }
+                  "Desarrollo Web (HTML/CSS/JS)",
+                  "Frameworks (React/Next.js)",
+                  "Diseño UI/UX",
+                  "Prototipado (Figma)",
+                  "Control de versiones (Git)",
+                  "Diseño Visual & Branding"
                 ].map((skill, index) => (
-                  <div key={index} className="space-y-3">
-                    <div className="flex items-center justify-between text-sm font-bold tracking-widest uppercase text-foreground/80">
-                      <span>{skill.name}</span>
-                      <span className="text-primary">{skill.level}</span>
-                    </div>
-                    <div className="relative h-4 bg-background border-2 border-primary/20 overflow-hidden">
-                      <div className="absolute inset-y-0 left-0 bg-primary border-r-2 border-accent transition-all duration-1000"
-                           style={{ width: skill.level, boxShadow: '0 0 15px rgba(193, 18, 31, 0.4)' }}>
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-                      </div>
-                    </div>
+                  <div key={index} className="flex items-center gap-4 group">
+                    <div className="w-2 h-2 border border-primary rotate-45 bg-primary/20 group-hover:bg-primary transition-colors duration-300"></div>
+                    <span className="text-sm font-bold tracking-widest uppercase text-foreground/80 group-hover:text-primary transition-colors duration-300">
+                      {skill}
+                    </span>
                   </div>
                 ))}
               </div>
