@@ -19,34 +19,41 @@ export function Passions() {
           </div>
           <div className="space-y-3" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
             <h2 className="text-4xl lg:text-5xl font-black text-primary-foreground uppercase tracking-widest">
-              Pasiones <span className="italic">&</span> Sombras
+              Pasiones <span className="italic">&</span> Intereses
             </h2>
           </div>
           <DividerOrnament className="mx-auto mt-8 text-primary-foreground/50" />
         </div>
         
         {/* Dynamic asymmetric layout with ornamental boxes */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Large block 1 - Designing and Drawing */}
           <div className="col-span-2 row-span-2 group">
-            <div className="relative h-full border-4 border-accent bg-background/5 backdrop-blur-sm overflow-hidden flex flex-col justify-end p-8 transition-all duration-500 hover:bg-background/20">
+            <div className="relative h-full min-h-[420px] border-4 border-primary-foreground/30 bg-background/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-accent">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1000&auto=format&fit=crop" 
+                src="/Desing.jpg" 
                 alt="Diseñar y Dibujar"
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-30 group-hover:opacity-50 group-hover:scale-110 transition-all duration-700"
+                className="absolute inset-0 w-full h-full object-cover grayscale opacity-30 group-hover:opacity-45 group-hover:scale-105 transition-all duration-700"
               />
-              <CornerOrnament position="top-left" className="absolute top-2 left-2 text-accent/60 w-8 h-8 z-10" />
-              <CornerOrnament position="bottom-right" className="absolute bottom-2 right-2 text-accent/60 w-8 h-8 z-10" />
-              
-              <div className="relative z-10 space-y-4">
-                <div className="w-16 h-16 border-4 border-accent/40 flex items-center justify-center bg-background/40">
-                  <div className="w-8 h-8 border-2 border-accent rotate-45 flex items-center justify-center">
-                    <span className="text-xl font-bold tracking-tighter">D</span>
+              <CornerOrnament position="top-left" className="absolute top-2 left-2 text-primary-foreground/40 w-8 h-8 z-10" />
+              <CornerOrnament position="bottom-right" className="absolute bottom-2 right-2 text-primary-foreground/40 w-8 h-8 z-10" />
+              <div className="absolute inset-6 border-2 border-primary-foreground/15 group-hover:border-primary-foreground/25 transition-all duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-black/10"></div>
+
+              <div className="relative z-10 h-full flex flex-col justify-end p-8">
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="w-14 h-14 border-2 border-primary-foreground/40 bg-black/25 flex items-center justify-center">
+                    <span className="text-xl font-black tracking-widest">D</span>
                   </div>
+                  <div className="h-px flex-1 bg-primary-foreground/25"></div>
                 </div>
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-black uppercase tracking-widest" style={{ fontFamily: "'Cinzel Decorative', serif" }}>Diseñar & Dibujar</h3>
-                  <p className="text-sm text-primary-foreground/90 leading-relaxed italic bg-black/20 p-2">"El trazo es la materialización del pensamiento oscuro."</p>
+                <div className="bg-black/35 border border-primary-foreground/20 p-5 space-y-2">
+                  <h3 className="text-2xl font-black uppercase tracking-widest" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
+                    Diseñar & Dibujar
+                  </h3>
+                  <p className="text-sm text-primary-foreground/85 leading-relaxed italic" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    Del boceto al hechizo visual.
+                  </p>
                 </div>
               </div>
               
@@ -57,92 +64,115 @@ export function Passions() {
           
           {/* Small block 1 - Piano */}
           <div className="col-span-1 group">
-            <div className="relative aspect-square border-2 border-primary-foreground/30 bg-background/10 backdrop-blur-sm overflow-hidden flex flex-col justify-end p-4 hover:border-accent transition-all duration-300">
+            <div className="relative aspect-square border-4 border-primary-foreground/30 bg-background/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-accent">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=1000&auto=format&fit=crop" 
-                alt="Piano"
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-40 transition-all duration-500"
+                src="/Piano.jpg" 
+                alt="Practicar Piano"
+                className="absolute inset-0 w-full h-full object-cover grayscale opacity-25 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
               />
-              <div className="relative z-10">
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] bg-black/40 p-1 inline-block">Piano</p>
+              <CornerOrnament position="top-left" className="absolute top-2 left-2 text-primary-foreground/35 w-7 h-7 z-10" />
+              <CornerOrnament position="bottom-right" className="absolute bottom-2 right-2 text-primary-foreground/35 w-7 h-7 z-10" />
+              <div className="absolute inset-4 border border-primary-foreground/15 group-hover:border-primary-foreground/25 transition-all duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-black/10"></div>
+
+              <div className="relative z-10 h-full flex flex-col justify-end p-4">
+                <div className="bg-black/35 border border-primary-foreground/20 p-3 space-y-1.5">
+                  <h3 className="text-sm font-black uppercase tracking-widest" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
+                    Piano
+                  </h3>
+                  <p className="text-[11px] text-primary-foreground/85 leading-snug italic" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    Ritmo que ordena el caos.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           
-          {/* Small block 2 - Violin */}
+          {/* Small block 2 - Aprender Violin */}
           <div className="col-span-1 group">
-            <div className="relative aspect-square border-4 border-primary-foreground bg-primary-foreground/10 overflow-hidden flex flex-col justify-end p-4 hover:bg-primary-foreground/20 transition-all duration-300">
+            <div className="relative aspect-square border-4 border-primary-foreground/30 bg-background/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-accent">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1460039230329-eb070fc6c77c?q=80&w=1000&auto=format&fit=crop" 
-                alt="Violín"
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-40 transition-all duration-500"
+                src="/Violin.jpg" 
+                alt="Aprender Violín"
+                className="absolute inset-0 w-full h-full object-cover grayscale opacity-25 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
               />
-              <div className="relative z-10">
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] bg-black/40 p-1 inline-block">Violín</p>
+              <CornerOrnament position="top-left" className="absolute top-2 left-2 text-primary-foreground/35 w-7 h-7 z-10" />
+              <CornerOrnament position="bottom-right" className="absolute bottom-2 right-2 text-primary-foreground/35 w-7 h-7 z-10" />
+              <div className="absolute inset-4 border border-primary-foreground/15 group-hover:border-primary-foreground/25 transition-all duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-black/10"></div>
+
+              <div className="relative z-10 h-full flex flex-col justify-end p-4">
+                <div className="bg-black/35 border border-primary-foreground/20 p-3 space-y-1.5">
+                  <h3 className="text-sm font-black uppercase tracking-widest" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
+                    Violín
+                  </h3>
+                  <p className="text-[11px] text-primary-foreground/85 leading-snug italic" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    Cuerdas que narran silencio.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           
           {/* Medium block - Gymnastics */}
           <div className="col-span-2 md:col-span-2 group">
-            <div className="relative h-full border-2 border-accent/60 bg-background/5 backdrop-blur-sm overflow-hidden flex flex-col justify-end p-8 hover:border-accent transition-all duration-300">
+            <div className="relative aspect-[2/1] border-4 border-primary-foreground/30 bg-background/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-accent">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1550345332-09e3ac987658?q=80&w=1000&auto=format&fit=crop" 
+                src="/GYM.jpg" 
                 alt="Gimnasia"
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-40 transition-all duration-500"
+                className="absolute inset-0 w-full h-full object-cover grayscale opacity-25 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
               />
-              <div className="relative z-10 space-y-3">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 border-4 border-primary-foreground/30 flex items-center justify-center bg-black/20">
-                    <span className="text-lg font-black">G</span>
+              <CornerOrnament position="top-left" className="absolute top-2 left-2 text-primary-foreground/35 w-8 h-8 z-10" />
+              <CornerOrnament position="bottom-right" className="absolute bottom-2 right-2 text-primary-foreground/35 w-8 h-8 z-10" />
+              <div className="absolute inset-6 border-2 border-primary-foreground/15 group-hover:border-primary-foreground/25 transition-all duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-black/10"></div>
+
+              <div className="relative z-10 h-full flex flex-col justify-end p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 border-2 border-primary-foreground/40 bg-black/25 flex items-center justify-center">
+                    <span className="text-lg font-black tracking-widest">G</span>
                   </div>
-                  <BatOrnament className="text-accent w-10 h-10" />
+                  <div className="h-px flex-1 bg-primary-foreground/25"></div>
                 </div>
-                <h3 className="text-xl font-bold uppercase tracking-widest" style={{ fontFamily: "'Cinzel Decorative', serif" }}>Gimnasia</h3>
-                <p className="text-xs text-primary-foreground/80 leading-tight bg-black/20 p-1">Fuerza y equilibrio en la penumbra del esfuerzo.</p>
+                <div className="bg-black/35 border border-primary-foreground/20 p-4 space-y-2">
+                  <h3 className="text-xl font-black uppercase tracking-widest" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
+                    Gimnasia
+                  </h3>
+                  <p className="text-sm text-primary-foreground/85 leading-snug italic" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    Fuerza que afina el cuerpo.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           
           {/* Small block 3 - Art */}
-          <div className="col-span-1 group">
-            <div className="relative aspect-square border-2 border-accent bg-accent/10 overflow-hidden flex flex-col justify-end p-4 hover:bg-accent/20 transition-all duration-300">
+          <div className="col-span-2 md:col-span-4 group">
+            <div className="relative aspect-[2/1] md:aspect-[4/1] border-4 border-primary-foreground/30 bg-background/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-accent">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1515405299443-f71bb40409f5?q=80&w=1000&auto=format&fit=crop" 
-                alt="Arte"
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-40 transition-all duration-500"
+                src="/Leer.jpg" 
+                alt="Leer"
+                className="absolute inset-0 w-full h-full object-cover grayscale opacity-25 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
               />
-              <div className="relative z-10">
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] bg-black/40 p-1 inline-block">Arte Oscuro</p>
-              </div>
-            </div>
-          </div>
-          
-          {/* Small block 4 - Symbology */}
-          <div className="col-span-1 group">
-            <div className="relative aspect-square border-4 border-primary-foreground/40 bg-background/10 overflow-hidden flex flex-col justify-end p-4 hover:border-primary-foreground transition-all duration-300">
-              <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1518131394553-c4031f00882e?q=80&w=1000&auto=format&fit=crop" 
-                alt="Simbología"
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-40 transition-all duration-500"
-              />
-              <div className="relative z-10">
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] bg-black/40 p-1 inline-block">Simbología</p>
-              </div>
-            </div>
-          </div>
+              <CornerOrnament position="top-left" className="absolute top-2 left-2 text-primary-foreground/35 w-8 h-8 z-10" />
+              <CornerOrnament position="bottom-right" className="absolute bottom-2 right-2 text-primary-foreground/35 w-8 h-8 z-10" />
+              <div className="absolute inset-6 border-2 border-primary-foreground/15 group-hover:border-primary-foreground/25 transition-all duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-black/10"></div>
 
-          {/* Medium block - Aesthetic (Moved below Gymnastics and sized properly) */}
-          <div className="col-span-2 md:col-span-2 group">
-            <div className="relative h-full border-2 border-primary-foreground/30 bg-background/5 backdrop-blur-sm p-6 hover:border-accent transition-all duration-300 overflow-hidden flex flex-col justify-center">
-              <div className="flex items-center gap-4 relative z-10">
-                <div className="w-12 h-12 border-4 border-accent/60 flex shrink-0 items-center justify-center bg-black/20">
-                  <GothicCross className="text-accent w-6 h-6" />
+              <div className="relative z-10 h-full flex flex-col justify-end p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 border-2 border-primary-foreground/40 bg-black/25 flex items-center justify-center">
+                    <span className="text-lg font-black tracking-widest">L</span>
+                  </div>
+                  <div className="h-px flex-1 bg-primary-foreground/25"></div>
                 </div>
-                <div className="flex-1 space-y-2">
-                  <h4 className="text-[10px] font-black uppercase tracking-widest" style={{ fontFamily: "'Cinzel Decorative', serif" }}>Cultura & Estética</h4>
-                  <div className="w-full h-0.5 bg-primary-foreground"></div>
-                  <div className="w-2/3 h-px bg-primary-foreground/60"></div>
+                <div className="bg-black/35 border border-primary-foreground/20 p-4 space-y-2">
+                  <h3 className="text-xl font-black uppercase tracking-widest" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
+                    Leer
+                  </h3>
+                  <p className="text-sm text-primary-foreground/85 leading-snug italic" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    Ideas que iluminan en silencio.
+                  </p>
                 </div>
               </div>
             </div>
