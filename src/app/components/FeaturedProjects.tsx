@@ -1,6 +1,6 @@
 import { CornerOrnament, DividerOrnament, GothicCross } from "./gothic/GothicOrnaments";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { Github } from "lucide-react";
+import { Github, Cloud } from "lucide-react";
 
 const secondaryProjects = [
   {
@@ -8,28 +8,32 @@ const secondaryProjects = [
     description: "Servicio serverless en AWS que automatiza la conversión de imágenes a blanco y negro y la protección de contenido mediante marcas de agua.",
     tech: ["AWS S3", "Lambda", "Pillow"],
     image: "/aws.png",
-    github: "http://app-frontend-johana.s3-website-us-east-1.amazonaws.com/"
+    link: "http://app-frontend-johana.s3-website-us-east-1.amazonaws.com/",
+    icon: "aws"
   },
   {
     title: "UnicornWave",
-    description: "Dashboard de analítica avanzada con visualizaciones en tiempo real y arquitectura escalable.",
-    tech: ["React", "D3.js", "Node.js"],
+    description:"Unicorn Wave es un reproductor de música web: reproduce canciones, gestiona playlists y favoritos, y permite integración con Spotify.",
+    tech: ["Next.js", "CSS", "TypeScript"],
     image: "/music.png",
-    github: "https://github.com/johanagaviria19/unicorn-wave"
+    link: "https://github.com/johanagaviria19/unicornwave.git",
+    icon: "github"
   },
   {
     title: "Calculadora3D",
     description: "Calculadora 3D para operaciones geométricas y transformaciones.",
-    tech: ["TypeScript", "Express", "MongoDB"],
+    tech: ["Javascript","TypeScript","CSS"],
     image: "/Calculadorafoto.png",
-    github: "https://github.com/johanagaviria19/calculator-3d"
+    link: "https://github.com/johanagaviria19/CalculadoraMultivariada.git",
+    icon: "github"
   },
   {
-    title: "Grimorio de API",
-    description: "Documentación interactiva para APIs REST con diseño inmersivo y explorador de endpoints.",
-    tech: ["Astro", "MDX", "Swagger"],
-    image: "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1000&auto=format&fit=crop",
-    github: "https://github.com/johanagaviria19/api-grimoire"
+    title: "MotorMingle",
+    description: "Este proyecto implementa un API REST para gestionar vehículos usando Java, Spring Boot y MongoDB. Además incluye una vista web simple para interactuar con la API, pruebas del controlador y configuración opcional de Docker.",
+    tech: ["Java", "Javascript", "Spring Boot", "MongoDB", "TypeScript", "CSS"],
+    image: "/Car.png",
+    link: "https://github.com/johanagaviria19/MotorMingle.git",
+    icon: "github"
   }
 ];
 
@@ -161,15 +165,15 @@ export function FeaturedProjects() {
                       {tag}
                     </span>
                   ))}
-                  {project.github && (
+                  {project.link && (
                     <a 
-                      href={project.github} 
+                      href={project.link} 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="ml-auto text-foreground/40 hover:text-primary transition-colors duration-300"
-                      aria-label={`Ver repositorio de ${project.title} en GitHub`}
+                      aria-label={`Ver repositorio de ${project.title}`}
                     >
-                      <Github size={18} />
+                      {project.icon === 'aws' ? <Cloud size={18} /> : <Github size={18} />}
                     </a>
                   )}
                 </div>
