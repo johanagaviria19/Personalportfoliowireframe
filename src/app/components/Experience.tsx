@@ -2,7 +2,7 @@ import { GothicCross, CornerOrnament, DividerOrnament } from "./gothic/GothicOrn
 
 export function Experience() {
   return (
-    <section className="relative py-24 lg:py-32 px-6 lg:px-12 bg-card/30">
+    <section id="experience" className="relative py-24 lg:py-32 px-6 lg:px-12 bg-card/30">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-[0.02]" 
            style={{ backgroundImage: 'linear-gradient(30deg, transparent 48%, currentColor 49%, currentColor 51%, transparent 52%), linear-gradient(150deg, transparent 48%, currentColor 49%, currentColor 51%, transparent 52%)', backgroundSize: '20px 20px' }}></div>
