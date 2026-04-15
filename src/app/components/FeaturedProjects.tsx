@@ -114,7 +114,7 @@ export function FeaturedProjects() {
               
               {/* Tags with gothic style */}
               <div className="flex gap-2 flex-wrap">
-                {["React", "TypeScript", "Tailwind", "Framer Motion"].map((tag) => (
+                {["React", "TypeScript", "Tailwind CSS", "Vite"].map((tag) => (
                   <span key={tag} className="px-3 py-1 border border-primary/40 text-[10px] font-bold tracking-widest uppercase text-primary hover:border-primary hover:bg-primary/10 transition-all duration-300">
                     {tag}
                   </span>
@@ -123,7 +123,7 @@ export function FeaturedProjects() {
               
               {/* Action button */}
               <button className="relative px-8 py-3 border-2 border-primary text-xs font-bold tracking-widest uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300 group overflow-hidden">
-                <span className="relative z-10">Ver Proyecto</span>
+                <span className="relative z-10">Ver Repositorio del Proyecto</span>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                      style={{ boxShadow: '0 0 30px rgba(193, 18, 31, 0.6)' }}></div>
               </button>
