@@ -20,6 +20,10 @@ export function Navigation() {
               { name: "Inicio", href: "#hero" },
               { name: "Sobre Mí", href: "#about" },
               { name: "Proyectos", href: "#projects" },
+              { name: "Pasiones", href: "#passions" },
+              { name: "Habilidades", href: "#skills" },
+              { name: "Formación", href: "#experience" },
+              { name: "Filosofía", href: "#philosophy" },
               { name: "Testimonios", href: "#testimonials" }
             ].map((item) => (
               <a key={item.name} href={item.href} className="relative group cursor-pointer py-2">
