@@ -29,10 +29,10 @@ export function Skills() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Technical Skills - Left side */}
           <div className="relative">
-            <div className="space-y-8 border-4 border-primary bg-card/50 p-8 lg:p-10">
+            <div className="relative space-y-8 border-4 border-primary bg-card/50 p-8 lg:p-10">
               {/* Corner ornaments */}
               <CornerOrnament position="top-left" className="absolute top-2 left-2 text-primary w-10 h-10" />
-              <CornerOrnament position="bottom-right" className="absolute bottom-2 right-2 text-primary w-10 h-10" />
+              <CornerOrnament position="bottom-right" className="absolute -bottom-1 right-2 text-primary w-10 h-10" />
               
               <div className="flex items-center gap-4 pb-4 border-b-4 border-primary">
                 <div className="w-8 h-8 border-4 border-primary flex items-center justify-center">
@@ -90,10 +90,10 @@ export function Skills() {
           
           {/* Creative Skills - Right side */}
           <div className="relative">
-            <div className="space-y-8 border-4 border-primary/60 bg-card/30 p-8 lg:p-10">
+            <div className="relative lg:h-full space-y-8 border-4 border-primary/60 bg-card/30 p-8 lg:p-10">
               {/* Corner ornaments */}
               <CornerOrnament position="top-right" className="absolute top-2 right-2 text-primary w-10 h-10" />
-              <CornerOrnament position="bottom-left" className="absolute bottom-2 left-2 text-primary w-10 h-10" />
+              <CornerOrnament position="bottom-left" className="absolute -bottom-1 left-2 text-primary w-10 h-10" />
               
               <div className="flex items-center gap-4 pb-4 border-b-2 border-primary/40">
                 <div className="w-8 h-8 border-2 border-primary/60 flex items-center justify-center">
