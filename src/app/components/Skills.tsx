@@ -2,7 +2,7 @@ import { GothicCross, CornerOrnament, DividerOrnament } from "./gothic/GothicOrn
 
 export function Skills() {
   return (
-    <section className="relative py-24 lg:py-32 px-6 lg:px-12">
+    <section id="skills" className="relative py-24 lg:py-32 px-6 lg:px-12">
       {/* Background texture */}
       <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.015]" 
            style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
