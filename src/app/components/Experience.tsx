@@ -100,6 +100,70 @@ export function Experience() {
             </div>
           </div>
           
+          {/* Experience item 2 - Academic high school */}
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
+            <div className="lg:col-span-3">
+              <div className="flex items-start gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="relative">
+                    <div className="w-6 h-6 border-4 border-primary bg-accent rotate-45"
+                         style={{ boxShadow: '0 0 15px rgba(193, 18, 31, 0.5)' }}></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <GothicCross size="sm" className="text-primary w-3 h-4" />
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <span className="text-xl font-bold text-primary uppercase tracking-widest" style={{ fontFamily: "'Montserrat', sans-serif" }}>2019 - 2023</span>
+                  <p className="text-xs text-foreground/40 uppercase tracking-widest font-medium">Bachillerato Académico</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="lg:col-span-9">
+              <div className="relative bg-background p-8 lg:p-10 border-4 border-primary group hover:border-accent transition-all duration-300">
+                <CornerOrnament position="top-right" className="absolute top-2 right-2 text-primary/60 w-8 h-8 group-hover:text-accent transition-colors duration-300" />
+                <CornerOrnament position="bottom-left" className="absolute bottom-2 left-2 text-primary/60 w-8 h-8 group-hover:text-accent transition-colors duration-300" />
+                
+                <div className="absolute inset-6 border border-primary/20 group-hover:border-primary/40 transition-all duration-300"></div>
+                
+                <div className="relative z-10 space-y-6">
+                  <div className="space-y-2" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
+                    <h3 className="text-2xl font-black text-foreground uppercase tracking-tight group-hover:text-primary transition-colors duration-300">Bachillerato Académico</h3>
+                    <p className="text-sm font-medium text-primary/60 uppercase tracking-widest italic">Colegio La Inmaculada</p>
+                  </div>
+                  
+                  <svg className="w-32 h-6" viewBox="0 0 120 20" fill="none">
+                    <path d="M0 10 L50 10" stroke="currentColor" strokeWidth="0.5" className="text-primary/40"/>
+                    <circle cx="60" cy="10" r="3" fill="currentColor" className="text-primary"/>
+                    <path d="M70 10 L120 10" stroke="currentColor" strokeWidth="0.5" className="text-primary/40"/>
+                  </svg>
+                  
+                  <div className="space-y-4 text-foreground/70 leading-relaxed text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <p>Formación integral con énfasis en pensamiento lógico, creatividad y habilidades comunicativas. Etapa clave para consolidar disciplina académica y vocación tecnológica.</p>
+                  </div>
+                  
+                  <div className="space-y-4 pt-4">
+                    {[
+                      "Bachillerato Académico finalizado en 2023.",
+                      "Presidenta estudiantil: liderazgo, mediación y consejería entre compañeros.",
+                      "Participación activa en actividades institucionales y proyectos colaborativos.",
+                      "Fortalecimiento de competencias de comunicación oral, escrita y trabajo en equipo."
+                    ].map((item, i) => (
+                      <div key={i} className="flex gap-4 items-center group/item">
+                        <div className="w-2 h-2 border border-primary rotate-45 group-hover/item:bg-primary transition-colors duration-300 flex-shrink-0"></div>
+                        <p className="text-xs uppercase tracking-widest text-foreground/60 group-hover/item:text-foreground transition-colors duration-300">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                     style={{ boxShadow: 'inset 0 0 40px rgba(193, 18, 31, 0.1)' }}></div>
+              </div>
+            </div>
+          </div>
+
           <div className="pt-2">
             <p className="text-sm font-bold text-primary uppercase tracking-[0.2em]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               Experiencia laboral
