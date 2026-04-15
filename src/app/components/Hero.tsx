@@ -108,17 +108,17 @@ export function Hero() {
                   
                   {/* Botones de Acción */}
                   <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-8 sm:mt-12 lg:mt-16 w-full sm:w-auto px-6 sm:px-0">
-                    <button className="w-full sm:w-auto relative px-8 sm:px-12 lg:px-20 py-3 lg:py-5 border-2 border-primary bg-primary text-primary-foreground font-bold tracking-[0.2em] transition-all duration-500 group overflow-hidden uppercase text-[10px] lg:text-sm">
+                    <a href="#projects" className="w-full sm:w-auto relative px-8 sm:px-12 lg:px-20 py-3 lg:py-5 border-2 border-primary bg-primary text-primary-foreground font-bold tracking-[0.2em] transition-all duration-500 group overflow-hidden uppercase text-[10px] lg:text-sm text-center">
                       <span className="relative z-10">Ver proyectos</span>
                       <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                            style={{ boxShadow: '0 0 40px rgba(193, 18, 31, 0.6)' }}></div>
-                    </button>
+                    </a>
                     
-                    <button className="w-full sm:w-auto relative px-8 sm:px-12 lg:px-20 py-3 lg:py-5 border-2 border-primary/40 hover:border-primary bg-transparent text-foreground font-bold tracking-[0.2em] transition-all duration-500 group uppercase text-[10px] lg:text-sm overflow-hidden">
+                    <a href="/CV.pdf" download className="w-full sm:w-auto relative px-8 sm:px-12 lg:px-20 py-3 lg:py-5 border-2 border-primary/40 hover:border-primary bg-transparent text-foreground font-bold tracking-[0.2em] transition-all duration-500 group uppercase text-[10px] lg:text-sm overflow-hidden text-center">
                       <span className="relative z-10">Descargar CV</span>
                       <div className="absolute inset-0 bg-primary/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </CathedralArch>
