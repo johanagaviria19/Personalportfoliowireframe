@@ -11,18 +11,18 @@ const secondaryProjects = [
     github: "http://app-frontend-johana.s3-website-us-east-1.amazonaws.com/"
   },
   {
-    title: "Cripta de Datos",
+    title: "UnicornWave",
     description: "Dashboard de analítica avanzada con visualizaciones en tiempo real y arquitectura escalable.",
     tech: ["React", "D3.js", "Node.js"],
-    image: "https://images.unsplash.com/photo-1551288049-bbdac8626ad1?q=80&w=1000&auto=format&fit=crop",
-    github: "https://github.com/johanagaviria19/data-crypt"
+    image: "/music.png",
+    github: "https://github.com/johanagaviria19/unicorn-wave"
   },
   {
-    title: "Santuario Social",
-    description: "Red social minimalista enfocada en la privacidad y la conexión entre artistas digitales.",
+    title: "Calculadora3D",
+    description: "Calculadora 3D para operaciones geométricas y transformaciones.",
     tech: ["TypeScript", "Express", "MongoDB"],
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop",
-    github: "https://github.com/johanagaviria19/social-sanctuary"
+    image: "/Calculadorafoto.png",
+    github: "https://github.com/johanagaviria19/calculator-3d"
   },
   {
     title: "Grimorio de API",
@@ -61,13 +61,10 @@ export function FeaturedProjects() {
                 {/* Main project frame */}
                 <div className="relative w-full aspect-[16/10] border-4 border-primary bg-card/80 overflow-hidden">
                   <ImageWithFallback 
-                    src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1000&auto=format&fit=crop" 
-                    alt="Project Cathedral"
-                    className="w-full h-full object-cover grayscale opacity-50 mix-blend-luminosity transition-transform duration-700 group-hover:scale-110"
+                    src="/portafolio.png" 
+                    alt="Portafolio Principal"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 opacity-50 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-20 group-hover:opacity-40 transition-opacity duration-500">
-                    <GothicCross size="lg" className="text-primary w-48 h-64" />
-                  </div>
                   {/* Corner ornaments */}
                   <CornerOrnament position="top-left" className="absolute top-2 left-2 text-primary w-10 h-10 z-10" />
                   <CornerOrnament position="top-right" className="absolute top-2 right-2 text-primary w-10 h-10 z-10" />
@@ -139,23 +136,11 @@ export function FeaturedProjects() {
                   <ImageWithFallback 
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 opacity-40 group-hover:opacity-60 transition-all duration-500"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 opacity-50 group-hover:opacity-100 transition-all duration-500"
                   />
                   <CornerOrnament position="top-left" className="absolute top-1 left-1 text-primary/30 w-8 h-8" />
                   <CornerOrnament position="bottom-right" className="absolute bottom-1 right-1 text-primary/30 w-8 h-8" />
                   <div className="absolute inset-4 border border-primary/20 group-hover:border-primary/40 transition-all duration-300 pointer-events-none"></div>
-                  
-                  {/* GitHub Button on Hover */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                    <a 
-                      href={project.github} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="p-4 border-2 border-primary bg-background/90 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                    >
-                      <Github size={24} />
-                    </a>
-                  </div>
                 </div>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                      style={{ boxShadow: '0 0 30px rgba(193, 18, 31, 0.3)' }}></div>
@@ -170,12 +155,23 @@ export function FeaturedProjects() {
                 <div className="text-xs text-foreground/60 leading-relaxed line-clamp-2" style={{ fontFamily: "'Inter', sans-serif" }}>
                   {project.description}
                 </div>
-                <div className="flex gap-2 flex-wrap">
+                <div className="flex gap-2 flex-wrap items-center">
                   {project.tech.map((tag) => (
                     <span key={tag} className="px-2 py-1 border border-primary/20 text-[9px] font-bold tracking-widest uppercase text-foreground/40 group-hover:border-primary/40 group-hover:text-primary transition-all duration-300">
                       {tag}
                     </span>
                   ))}
+                  {project.github && (
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="ml-auto text-foreground/40 hover:text-primary transition-colors duration-300"
+                      aria-label={`Ver repositorio de ${project.title} en GitHub`}
+                    >
+                      <Github size={18} />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
