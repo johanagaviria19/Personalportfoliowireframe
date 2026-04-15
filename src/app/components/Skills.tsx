@@ -48,10 +48,17 @@ export function Skills() {
                 {[
                   "Desarrollo Web (HTML/CSS/JS)",
                   "Frameworks (React/Next.js)",
+                  "Backend & Automatización (Python)",
+                  "Cloud (AWS)",
+                  "APIs REST & Integraciones",
+                  "Bases de Datos (SQL/NoSQL)",
                   "Diseño UI/UX",
                   "Prototipado (Figma)",
                   "Control de versiones (Git)",
-                  "Diseño Visual & Branding"
+                  "Diseño Visual (CorelDraw/Photoshop)",
+                  "Analítica & Dashboards (Power BI)",
+                  "Testing & Calidad",
+                  "Deploy & CI/CD"
                 ].map((skill, index) => (
                   <div key={index} className="flex items-center gap-4 group">
                     <div className="w-2 h-2 border border-primary rotate-45 bg-primary/20 group-hover:bg-primary transition-colors duration-300"></div>
@@ -68,7 +75,9 @@ export function Skills() {
                   {[
                     "HTML5", "CSS3", "JavaScript", "TypeScript", 
                     "React", "Next.js", "Tailwind CSS", "Figma", 
-                    "Git", "GitHub", "UI/UX", "Branding"
+                    "Git", "GitHub", "UI/UX", "Branding",
+                    "CorelDraw", "Photoshop", "Power BI",
+                    "Python", "AWS"
                   ].map((tech, i) => (
                     <div key={tech} className={`px-4 py-2 border border-primary/40 hover:border-primary hover:bg-primary/10 transition-all duration-300 group cursor-default ${i % 3 === 0 ? 'bg-primary/5' : ''}`}>
                       <span className="text-[10px] font-bold uppercase tracking-widest text-foreground/70 group-hover:text-primary">{tech}</span>
