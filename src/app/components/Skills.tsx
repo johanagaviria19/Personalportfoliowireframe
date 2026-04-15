@@ -46,6 +46,7 @@ export function Skills() {
               {/* Skill list without bars */}
               <div className="space-y-6 relative pt-4">
                 {[
+                  "Inteligencia Artificial",
                   "Desarrollo Web (HTML/CSS/JS)",
                   "Frameworks (React/Next.js)",
                   "Backend & Automatización (Python)",
@@ -73,6 +74,7 @@ export function Skills() {
               <div className="pt-8 border-t-2 border-primary/20">
                 <div className="flex flex-wrap gap-3">
                   {[
+                    "Inteligencia Artificial",
                     "HTML5", "CSS3", "JavaScript", "TypeScript", 
                     "React", "Next.js", "Tailwind CSS", "Figma", 
                     "Git", "GitHub", "UI/UX", "Branding",
@@ -112,7 +114,11 @@ export function Skills() {
                   { name: "Comunicación Efectiva", desc: "Narrativa clara y colaborativa." },
                   { name: "Atención al Detalle", desc: "Búsqueda de la perfección en cada píxel." },
                   { name: "Trabajo en Equipo", desc: "Sinergia para lograr objetivos comunes." },
-                  { name: "Adaptabilidad", desc: "Evolución constante en entornos digitales." }
+                  { name: "Adaptabilidad", desc: "Evolución constante en entornos digitales." },
+                  { name: "Empatía", desc: "Comprensión real de necesidades y contextos del usuario." },
+                  { name: "Escucha Activa", desc: "Apertura para recibir feedback y convertirlo en mejoras." },
+                  { name: "Liderazgo Colaborativo", desc: "Impulso de equipos con claridad, respeto y propósito." },
+                  { name: "Gestión del Tiempo", desc: "Organización eficiente para cumplir metas y entregables." }
                 ].map((skill, index) => (
                   <div key={index} className="flex items-start gap-4 group">
                     <div className="relative w-12 h-12 border-2 border-primary/40 bg-card group-hover:border-primary transition-all duration-300 flex-shrink-0">

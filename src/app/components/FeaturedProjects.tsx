@@ -122,11 +122,16 @@ export function FeaturedProjects() {
               </div>
               
               {/* Action button */}
-              <button className="relative px-8 py-3 border-2 border-primary text-xs font-bold tracking-widest uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300 group overflow-hidden">
+              <a
+                href="https://github.com/johanagaviria19/Personalportfoliowireframe.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block relative px-8 py-3 border-2 border-primary text-xs font-bold tracking-widest uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300 group overflow-hidden text-center"
+              >
                 <span className="relative z-10">Ver Repositorio del Proyecto</span>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                      style={{ boxShadow: '0 0 30px rgba(193, 18, 31, 0.6)' }}></div>
-              </button>
+              </a>
             </div>
           </div>
         </div>

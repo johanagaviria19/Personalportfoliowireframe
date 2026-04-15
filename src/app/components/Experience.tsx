@@ -179,7 +179,7 @@ export function Experience() {
                   <div className="w-0.5 h-32 bg-gradient-to-b from-primary to-primary/20 hidden lg:block"></div>
                 </div>
                 <div className="space-y-2">
-                  <span className="text-xl font-bold text-primary uppercase tracking-widest" style={{ fontFamily: "'Montserrat', sans-serif" }}>2022 - 2024</span>
+                  <span className="text-xl font-bold text-primary uppercase tracking-widest" style={{ fontFamily: "'Montserrat', sans-serif" }}>2025 - Actualidad</span>
                   <p className="text-xs text-foreground/40 uppercase tracking-widest font-medium">Desarrollo Web</p>
                 </div>
               </div>
@@ -229,7 +229,66 @@ export function Experience() {
             </div>
           </div>
           
-          {/* Experience item 3 - Final item without connecting line */}
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
+            <div className="lg:col-span-3">
+              <div className="flex items-start gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="w-6 h-6 border-4 border-primary bg-accent rotate-45"
+                       style={{ boxShadow: '0 0 15px rgba(193, 18, 31, 0.5)' }}></div>
+                  <div className="w-0.5 h-32 bg-gradient-to-b from-primary to-primary/20 hidden lg:block"></div>
+                </div>
+                <div className="space-y-2">
+                  <span className="text-xl font-bold text-primary uppercase tracking-widest" style={{ fontFamily: "'Montserrat', sans-serif" }}>2019 - Actualidad</span>
+                  <p className="text-xs text-foreground/40 uppercase tracking-widest font-medium">Diseño & Producto</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="lg:col-span-9">
+              <div className="relative bg-background p-8 lg:p-10 border-4 border-primary group hover:border-accent transition-all duration-300">
+                <CornerOrnament position="top-right" className="absolute top-2 right-2 text-primary/60 w-8 h-8 group-hover:text-accent transition-colors duration-300" />
+                <CornerOrnament position="bottom-left" className="absolute bottom-2 left-2 text-primary/60 w-8 h-8 group-hover:text-accent transition-colors duration-300" />
+                
+                <div className="absolute inset-6 border border-primary/20 group-hover:border-primary/40 transition-all duration-300"></div>
+                
+                <div className="relative z-10 space-y-6">
+                  <div className="space-y-2" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
+                    <h3 className="text-2xl font-black text-foreground uppercase tracking-tight group-hover:text-primary transition-colors duration-300">Diseñadora y Desarrolladora de Productos</h3>
+                    <p className="text-sm font-medium text-primary/60 uppercase tracking-widest italic">Gaviort – Taller de Arte y Diseño</p>
+                  </div>
+                  
+                  <svg className="w-32 h-6" viewBox="0 0 120 20" fill="none">
+                    <path d="M0 10 L50 10" stroke="currentColor" strokeWidth="0.5" className="text-primary/40"/>
+                    <circle cx="60" cy="10" r="3" fill="currentColor" className="text-primary"/>
+                    <path d="M70 10 L120 10" stroke="currentColor" strokeWidth="0.5" className="text-primary/40"/>
+                  </svg>
+                  
+                  <div className="space-y-4 text-foreground/70 leading-relaxed text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <p>Desarrollo y co-creación de productos personalizados, integrando creatividad, funcionalidad y herramientas digitales para llevar ideas a resultados concretos.</p>
+                  </div>
+                  
+                  <div className="space-y-4 pt-4">
+                    {[
+                      "Desarrollo y co-creación de productos personalizados, adaptados a las necesidades del cliente.",
+                      "Diseño de propuestas innovadoras combinando creatividad y funcionalidad.",
+                      "Aplicación de conceptos técnicos y cálculos para optimizar procesos de diseño y producción.",
+                      "Gestión de proyectos creativos desde la idea hasta la entrega final.",
+                      "Uso de herramientas digitales para diseño gráfico y desarrollo visual."
+                    ].map((item, i) => (
+                      <div key={i} className="flex gap-4 items-center group/item">
+                        <div className="w-2 h-2 border border-primary rotate-45 group-hover/item:bg-primary transition-colors duration-300 flex-shrink-0"></div>
+                        <p className="text-xs uppercase tracking-widest text-foreground/60 group-hover/item:text-foreground transition-colors duration-300">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                     style={{ boxShadow: 'inset 0 0 40px rgba(193, 18, 31, 0.1)' }}></div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-3">
               <div className="flex items-start gap-4">
@@ -237,15 +296,14 @@ export function Experience() {
                   <div className="relative">
                     <div className="w-6 h-6 border-4 border-primary bg-accent rotate-45"
                          style={{ boxShadow: '0 0 15px rgba(193, 18, 31, 0.5)' }}></div>
-                    {/* Gothic cross on final marker */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <GothicCross size="sm" className="text-primary w-3 h-4" />
                     </div>
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <span className="text-xl font-bold text-primary uppercase tracking-widest" style={{ fontFamily: "'Montserrat', sans-serif" }}>2020 - 2022</span>
-                  <p className="text-xs text-foreground/40 uppercase tracking-widest font-medium">Diseño Creativo</p>
+                  <span className="text-xl font-bold text-primary uppercase tracking-widest" style={{ fontFamily: "'Montserrat', sans-serif" }}>2025 - 2026</span>
+                  <p className="text-xs text-foreground/40 uppercase tracking-widest font-medium">Marca & Comunicación</p>
                 </div>
               </div>
             </div>
@@ -261,8 +319,8 @@ export function Experience() {
                 
                 <div className="relative z-10 space-y-6">
                   <div className="space-y-2" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
-                    <h3 className="text-2xl font-black text-foreground uppercase tracking-tight group-hover:text-primary transition-colors duration-300">Diseño Visual & Multimedia</h3>
-                    <p className="text-sm font-medium text-primary/60 uppercase tracking-widest italic">Academia de Artes Digitales</p>
+                    <h3 className="text-2xl font-black text-foreground uppercase tracking-tight group-hover:text-primary transition-colors duration-300">Diseñadora de Información y Apoyo en Desarrollo de Marca</h3>
+                    <p className="text-sm font-medium text-primary/60 uppercase tracking-widest italic">Carvajal Autotech</p>
                   </div>
                   
                   <svg className="w-32 h-6" viewBox="0 0 120 20" fill="none">
@@ -272,15 +330,15 @@ export function Experience() {
                   </svg>
                   
                   <div className="space-y-4 text-foreground/70 leading-relaxed text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <p>Exploración de lenguajes visuales y herramientas de diseño gráfico. Especialización en la creación de identidades visuales y contenido multimedia de alto impacto.</p>
+                    <p>Diseño de información visual para comunicación corporativa, fortaleciendo la identidad de marca y estructurando contenidos para maximizar claridad e impacto.</p>
                   </div>
                   
                   <div className="space-y-4 pt-4">
                     {[
-                      "Dominio de herramientas de la Suite Adobe (Photoshop, Illustrator).",
-                      "Creación de prototipos interactivos en Figma.",
-                      "Desarrollo de conceptos creativos para marcas.",
-                      "Producción y edición de contenido audiovisual."
+                      "Diseño de información visual para presentaciones corporativas y contenidos formativos.",
+                      "Desarrollo de propuestas personalizadas enfocadas en la identidad y posicionamiento de marca.",
+                      "Apoyo en la creación de contenido audiovisual para comunicación interna y externa.",
+                      "Organización y estructuración de información para facilitar la comprensión y el impacto visual."
                     ].map((item, i) => (
                       <div key={i} className="flex gap-4 items-center group/item">
                         <div className="w-2 h-2 border border-primary rotate-45 group-hover/item:bg-primary transition-colors duration-300 flex-shrink-0"></div>

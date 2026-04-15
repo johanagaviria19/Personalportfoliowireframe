@@ -1,28 +1,28 @@
 import { useState } from "react";
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { CornerOrnament, DividerOrnament, GothicCross, BatOrnament } from "./gothic/GothicOrnaments";
 
 const initialTestimonials = [
   {
-    text: "El trabajo de Johana es simplemente excepcional. Su capacidad para fusionar una estética gótica profunda con una funcionalidad técnica impecable es algo que rara vez se ve en el desarrollo moderno. El portafolio no solo muestra sus habilidades, sino su alma artística.",
-    author: "Alexander Vane",
-    role: "Director Creativo",
-    company: "Obsidian Digital",
-    praise: "Testimonio sobre el diseño y arquitectura del portafolio 2024"
+    text: "Johana tiene algo muy valioso: buenas ideas y la capacidad de llevarlas a algo visual claro. Aunque no se enfoca tanto en lo técnico profundo, sabe cómo plantear soluciones útiles y bien pensadas. Se nota que entiende lo que el usuario necesita.",
+    author: "ESTEBAN GAVIRIA",
+    role: "SENIOR DATA SCIENTIST",
+    company: "INGENIERO INDUSTRIAL",
+    praise: "Opinión sobre ideas, claridad visual y enfoque en el usuario"
   },
   {
-    text: "Johana no solo entiende el código, entiende la narrativa detrás de él. Su trabajo en el desarrollo es tan limpio y estructurado como su visión artística. Es una desarrolladora que realmente se preocupa por la experiencia del usuario.",
-    author: "Morgana Thorne",
-    role: "Senior Developer",
-    company: "Nocturne Systems",
-    praise: "Opinión sobre la calidad del código y estructura técnica"
+    text: "Lo que más destaco de Johana es su forma de pensar. No es solo diseño, siempre propone ideas interesantes y diferentes. En programación va paso a paso, pero compensa mucho con creatividad y enfoque en lo que realmente importa del producto.",
+    author: "ANDRÉS JARAMILLO",
+    role: "FREELANCE",
+    company: "INGENIERO DE SOFTWARE",
+    praise: "Destaca creatividad, propuestas y enfoque en producto"
   },
   {
-    text: "El portafolio de Johana es una obra maestra de diseño gótico moderno. Logró capturar una esencia oscura pero profesional que destaca sobre cualquier otro desarrollador que hayamos visto en la industria creativa.",
-    author: "Victor Draken",
-    role: "Lead Designer",
-    company: "Crimson Studio",
-    praise: "Reconocimiento a la identidad visual y UI/UX"
+    text: "A mí me gustó trabajar con Johana porque entiende fácil lo que uno quiere. Tiene buenas ideas y busca que todo se vea bonito pero también útil. Además, explica sin enredar, eso para uno es muy importante.",
+    author: "ROCÍO MONCAYO",
+    role: "COMERCIANTE",
+    company: "CONTADORA",
+    praise: "Resalta comunicación clara y soluciones útiles"
   }
 ];
 
@@ -110,21 +110,6 @@ export function Testimonials() {
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                      style={{ boxShadow: '0 0 20px rgba(193, 18, 31, 0.4)' }}></div>
               </button>
-            </div>
-
-            {/* Contact info blocks with gothic frames */}
-            <div className="space-y-6 pt-8">
-              <div className="flex gap-4 group cursor-pointer">
-                <div className="w-12 h-12 border-2 border-primary/60 group-hover:border-primary bg-card group-hover:bg-primary/10 transition-all duration-300 flex items-center justify-center">
-                  <div className="w-6 h-6 border border-primary rotate-45 flex items-center justify-center">
-                    <span className="text-[10px] font-bold text-primary">@</span>
-                  </div>
-                </div>
-                <div className="flex-1 space-y-1">
-                  <h4 className="text-xs font-bold text-primary uppercase tracking-widest">Email</h4>
-                  <p className="text-sm text-foreground/80">contacto@ejemplo.com</p>
-                </div>
-              </div>
             </div>
           </div>
           
@@ -317,14 +302,21 @@ export function Testimonials() {
                     <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Manda un cuervo</p>
                     <a href="mailto:johanagaviria19@gmail.com" className="flex items-center justify-center gap-3 text-sm font-bold hover:text-background transition-colors duration-300">
                       <Mail size={16} className="text-primary-foreground/70 group-hover/contact:text-background" />
-                      johanagaviria19@gmail.com
+                      johanacatalinagv@gmail.com
                     </a>
                   </div>
                   <div className="space-y-3 group/contact">
                     <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Red Profesional</p>
                     <a href="https://linkedin.com/in/johanagaviria19" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 text-sm font-bold hover:text-background transition-colors duration-300">
                       <Linkedin size={16} className="text-primary-foreground/70 group-hover/contact:text-background" />
-                      LinkedIn/johanagaviria19
+                      LinkedIn/johanagaviria
+                    </a>
+                  </div>
+                  <div className="space-y-3 group/contact">
+                    <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Instagram</p>
+                    <a href="https://instagram.com/johanagaviria19" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 text-sm font-bold hover:text-background transition-colors duration-300">
+                      <Instagram size={16} className="text-primary-foreground/70 group-hover/contact:text-background" />
+                      @Gaviort.co
                     </a>
                   </div>
                   <div className="space-y-3 group/contact">
@@ -338,24 +330,18 @@ export function Testimonials() {
                     <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Llamada Directa</p>
                     <a href="tel:+573000000000" className="flex items-center justify-center gap-3 text-sm font-bold hover:text-background transition-colors duration-300">
                       <Phone size={16} className="text-primary-foreground/70 group-hover/contact:text-background" />
-                      +57 300 000 0000
+                      +57 3213285438
                     </a>
                   </div>
                   <div className="space-y-3 group/contact">
                     <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Ubicación</p>
                     <div className="flex items-center justify-center gap-3 text-sm font-bold">
                       <MapPin size={16} className="text-primary-foreground/70" />
-                      Medellín, Colombia
+                      Pasto - Nariño, Colombia
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-8">
-                  <button className="relative px-10 py-4 border-2 border-primary-foreground bg-primary-foreground text-primary font-black uppercase tracking-[0.2em] text-xs hover:bg-transparent hover:text-primary-foreground transition-all duration-300 group overflow-hidden">
-                    <span className="relative z-10">Descargar CV</span>
-                    <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                  </button>
-                </div>
               </div>
             </div>
           </div>
