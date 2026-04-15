@@ -25,6 +25,11 @@ export function Experience() {
         
         {/* Timeline layout with gothic styling */}
         <div className="space-y-12 lg:space-y-16">
+          <div className="pb-2">
+            <p className="text-sm font-bold text-primary uppercase tracking-[0.2em]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+              Formación académica
+            </p>
+          </div>
           {/* Experience item 1 - Education */}
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Timeline marker & date */}
@@ -95,6 +100,11 @@ export function Experience() {
             </div>
           </div>
           
+          <div className="pt-2">
+            <p className="text-sm font-bold text-primary uppercase tracking-[0.2em]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+              Experiencia laboral
+            </p>
+          </div>
           {/* Experience item 2 */}
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-3">
