@@ -2,7 +2,7 @@ import { GothicCross, DividerOrnament } from "./gothic/GothicOrnaments";
 
 export function Philosophy() {
   return (
-    <section className="relative py-24 lg:py-32 px-6 lg:px-12 bg-background overflow-hidden">
+    <section id="philosophy" className="relative py-24 lg:py-32 px-6 lg:px-12 bg-background overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-primary/5 rounded-full pointer-events-none"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-primary/10 rounded-full pointer-events-none rotate-45"></div>
