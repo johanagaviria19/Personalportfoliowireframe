@@ -1,7 +1,11 @@
+"use client";
+
 import { CornerOrnament, DividerOrnament, GothicCross } from "./gothic/GothicOrnaments";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useLanguage } from "../language-context";
 
 export function About() {
+  const { language } = useLanguage();
   return (
     <section id="about" className="relative py-24 lg:py-32 px-6 lg:px-12 bg-card/30">
       {/* Background pattern */}
@@ -52,7 +56,7 @@ export function About() {
             {/* Title - Gothic font */}
             <div className="space-y-3" style={{ fontFamily: "'Playfair Display', serif" }}>
               <h2 className="text-4xl lg:text-5xl font-black text-foreground uppercase tracking-tight">
-                Sobre <span className="text-primary italic">mí</span>
+                {language === "en" ? <>About <span className="text-primary italic">me</span></> : <>Sobre <span className="text-primary italic">mí</span></>}
               </h2>
             </div>
             
@@ -64,10 +68,14 @@ export function About() {
             {/* Body text lines */}
             <div className="space-y-4 pt-4 text-foreground/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
               <p className="text-lg">
-                Soy ingeniera de software y diseñadora apasionada por crear experiencias digitales que combinan lógica, estética y emoción. Me especializo en transformar ideas en productos funcionales con identidad visual fuerte, cuidando tanto la estructura del código como la narrativa visual.
+                {language === "en"
+                  ? "I am a software engineer and designer passionate about creating digital experiences that combine logic, aesthetics, and emotion. I specialize in transforming ideas into functional products with a strong visual identity, taking care of both code structure and visual storytelling."
+                  : "Soy ingeniera de software y diseñadora apasionada por crear experiencias digitales que combinan lógica, estética y emoción. Me especializo en transformar ideas en productos funcionales con identidad visual fuerte, cuidando tanto la estructura del código como la narrativa visual."}
               </p>
               <p>
-                Mi enfoque se centra en el equilibrio entre tecnología y diseño, buscando siempre soluciones innovadoras, intuitivas y visualmente impactantes. Disfruto trabajar en proyectos donde puedo explorar creatividad, detalle y significado.
+                {language === "en"
+                  ? "My approach focuses on balancing technology and design, always seeking innovative, intuitive, and visually striking solutions. I enjoy working on projects where I can explore creativity, detail, and meaning."
+                  : "Mi enfoque se centra en el equilibrio entre tecnología y diseño, buscando siempre soluciones innovadoras, intuitivas y visualmente impactantes. Disfruto trabajar en proyectos donde puedo explorar creatividad, detalle y significado."}
               </p>
             </div>  
             
@@ -82,8 +90,8 @@ export function About() {
                     <div className="w-8 h-8 border border-primary rotate-45"></div>
                   </div>
                   <div className="space-y-2">
-                    <h4 className="font-bold text-primary uppercase tracking-widest text-sm">Lógica & Estructura</h4>
-                    <p className="text-xs text-foreground/60 leading-tight">Arquitectura de software escalable y código limpio.</p>
+                    <h4 className="font-bold text-primary uppercase tracking-widest text-sm">{language === "en" ? "Logic & Structure" : "Lógica & Estructura"}</h4>
+                    <p className="text-xs text-foreground/60 leading-tight">{language === "en" ? "Scalable software architecture and clean code." : "Arquitectura de software escalable y código limpio."}</p>
                   </div>
                 </div>
                 <CornerOrnament position="top-right" className="absolute top-1 right-1 w-6 h-6 text-primary/30" />
@@ -98,8 +106,8 @@ export function About() {
                     <GothicCross size="sm" className="text-primary-foreground w-8 h-10" />
                   </div>
                   <div className="space-y-2">
-                    <h4 className="font-bold text-primary-foreground uppercase tracking-widest text-sm">Estética & Narrativa</h4>
-                    <p className="text-xs text-primary-foreground/70 leading-tight">Diseño visual con propósito y emoción.</p>
+                    <h4 className="font-bold text-primary-foreground uppercase tracking-widest text-sm">{language === "en" ? "Aesthetics & Storytelling" : "Estética & Narrativa"}</h4>
+                    <p className="text-xs text-primary-foreground/70 leading-tight">{language === "en" ? "Visual design with purpose and emotion." : "Diseño visual con propósito y emoción."}</p>
                   </div>
                 </div>
                 <CornerOrnament position="bottom-left" className="absolute bottom-1 left-1 w-6 h-6 text-primary-foreground/30" />

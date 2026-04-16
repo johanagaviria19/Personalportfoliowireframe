@@ -1,7 +1,11 @@
+"use client";
+
 import { GothicCross, BatOrnament, CornerOrnament, DividerOrnament } from "./gothic/GothicOrnaments";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useLanguage } from "../language-context";
 
 export function Passions() {
+  const { language } = useLanguage();
   return (
     <section id="passions" className="relative py-24 lg:py-32 px-6 lg:px-12 bg-primary/95 text-primary-foreground overflow-hidden"
              style={{ boxShadow: 'inset 0 10px 60px rgba(0,0,0,0.5)' }}>
@@ -19,7 +23,7 @@ export function Passions() {
           </div>
           <div className="space-y-3" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
             <h2 className="text-4xl lg:text-5xl font-black text-primary-foreground uppercase tracking-widest">
-              Pasiones <span className="italic">&</span> Intereses
+              {language === "en" ? <>Passions <span className="italic">&</span> Interests</> : <>Pasiones <span className="italic">&</span> Intereses</>}
             </h2>
           </div>
           <DividerOrnament className="mx-auto mt-8 text-primary-foreground/50" />
@@ -32,7 +36,7 @@ export function Passions() {
             <div className="relative h-full min-h-[420px] border-4 border-primary-foreground/30 bg-background/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-accent">
               <ImageWithFallback 
                 src="/Desing.jpg" 
-                alt="Diseñar y Dibujar"
+                alt={language === "en" ? "Design and Draw" : "Diseñar y Dibujar"}
                 className="absolute inset-0 w-full h-full object-cover grayscale opacity-30 group-hover:opacity-45 group-hover:scale-105 transition-all duration-700"
               />
               <CornerOrnament position="top-left" className="absolute top-2 left-2 text-primary-foreground/40 w-8 h-8 z-10" />
@@ -49,10 +53,10 @@ export function Passions() {
                 </div>
                 <div className="bg-black/35 border border-primary-foreground/20 p-5 space-y-2">
                   <h3 className="text-2xl font-black uppercase tracking-widest" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
-                    Diseñar & Dibujar
+                    {language === "en" ? "Design & Draw" : "Diseñar & Dibujar"}
                   </h3>
                   <p className="text-sm text-primary-foreground/85 leading-relaxed italic" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    Del boceto al hechizo visual.
+                    {language === "en" ? "From sketch to visual spell." : "Del boceto al hechizo visual."}
                   </p>
                 </div>
               </div>
@@ -67,7 +71,7 @@ export function Passions() {
             <div className="relative aspect-square border-4 border-primary-foreground/30 bg-background/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-accent">
               <ImageWithFallback 
                 src="/Piano.jpg" 
-                alt="Practicar Piano"
+                alt={language === "en" ? "Practice Piano" : "Practicar Piano"}
                 className="absolute inset-0 w-full h-full object-cover grayscale opacity-25 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
               />
               <CornerOrnament position="top-left" className="absolute top-2 left-2 text-primary-foreground/35 w-7 h-7 z-10" />
@@ -81,7 +85,7 @@ export function Passions() {
                     Piano
                   </h3>
                   <p className="text-[11px] text-primary-foreground/85 leading-snug italic" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    Ritmo que ordena el caos.
+                    {language === "en" ? "Rhythm that orders chaos." : "Ritmo que ordena el caos."}
                   </p>
                 </div>
               </div>
@@ -93,7 +97,7 @@ export function Passions() {
             <div className="relative aspect-square border-4 border-primary-foreground/30 bg-background/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-accent">
               <ImageWithFallback 
                 src="/Violin.jpg" 
-                alt="Aprender Violín"
+                alt={language === "en" ? "Learn Violin" : "Aprender Violín"}
                 className="absolute inset-0 w-full h-full object-cover grayscale opacity-25 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
               />
               <CornerOrnament position="top-left" className="absolute top-2 left-2 text-primary-foreground/35 w-7 h-7 z-10" />
@@ -104,10 +108,10 @@ export function Passions() {
               <div className="relative z-10 h-full flex flex-col justify-end p-4">
                 <div className="bg-black/35 border border-primary-foreground/20 p-3 space-y-1.5">
                   <h3 className="text-sm font-black uppercase tracking-widest" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
-                    Violín
+                    {language === "en" ? "Violin" : "Violín"}
                   </h3>
                   <p className="text-[11px] text-primary-foreground/85 leading-snug italic" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    Cuerdas que narran silencio.
+                    {language === "en" ? "Strings that narrate silence." : "Cuerdas que narran silencio."}
                   </p>
                 </div>
               </div>
@@ -119,7 +123,7 @@ export function Passions() {
             <div className="relative aspect-[2/1] border-4 border-primary-foreground/30 bg-background/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-accent">
               <ImageWithFallback 
                 src="/GYM.jpg" 
-                alt="Gimnasia"
+                alt={language === "en" ? "Gymnastics" : "Gimnasia"}
                 className="absolute inset-0 w-full h-full object-cover grayscale opacity-25 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
               />
               <CornerOrnament position="top-left" className="absolute top-2 left-2 text-primary-foreground/35 w-8 h-8 z-10" />
@@ -136,10 +140,10 @@ export function Passions() {
                 </div>
                 <div className="bg-black/35 border border-primary-foreground/20 p-4 space-y-2">
                   <h3 className="text-xl font-black uppercase tracking-widest" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
-                    Gimnasia
+                    {language === "en" ? "Gymnastics" : "Gimnasia"}
                   </h3>
                   <p className="text-sm text-primary-foreground/85 leading-snug italic" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    Fuerza que afina el cuerpo.
+                    {language === "en" ? "Strength that refines the body." : "Fuerza que afina el cuerpo."}
                   </p>
                 </div>
               </div>
@@ -151,7 +155,7 @@ export function Passions() {
             <div className="relative aspect-[2/1] md:aspect-[4/1] border-4 border-primary-foreground/30 bg-background/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-accent">
               <ImageWithFallback 
                 src="/Leer.jpg" 
-                alt="Leer"
+                alt={language === "en" ? "Reading" : "Leer"}
                 className="absolute inset-0 w-full h-full object-cover grayscale opacity-25 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
               />
               <CornerOrnament position="top-left" className="absolute top-2 left-2 text-primary-foreground/35 w-8 h-8 z-10" />
@@ -168,10 +172,10 @@ export function Passions() {
                 </div>
                 <div className="bg-black/35 border border-primary-foreground/20 p-4 space-y-2">
                   <h3 className="text-xl font-black uppercase tracking-widest" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
-                    Leer
+                    {language === "en" ? "Reading" : "Leer"}
                   </h3>
                   <p className="text-sm text-primary-foreground/85 leading-snug italic" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    Ideas que iluminan en silencio.
+                    {language === "en" ? "Ideas that shine in silence." : "Ideas que iluminan en silencio."}
                   </p>
                 </div>
               </div>

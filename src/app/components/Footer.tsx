@@ -1,6 +1,10 @@
+"use client";
+
 import { GothicCross, DividerOrnament, BatOrnament } from "./gothic/GothicOrnaments";
+import { useLanguage } from "../language-context";
 
 export function Footer() {
+  const { language } = useLanguage();
   return (
     <footer className="relative bg-card/30 border-t-4 border-primary">
       {/* Decorative top border */}
@@ -8,7 +12,7 @@ export function Footer() {
       
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16 lg:py-20">
         {/* Main footer content */}
-        <div className="grid md:grid-cols-4 gap-12 lg:gap-16 mb-16">
+        <div className="grid md:grid-cols-3 gap-12 lg:gap-16 mb-16">
           {/* Brand column with gothic cross */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
@@ -17,7 +21,7 @@ export function Footer() {
               <h3 className="text-xl font-black uppercase tracking-widest" style={{ fontFamily: "'Cinzel Decorative', serif" }}>Johana <span className="text-primary">Catalina</span></h3>
             </div>
             <div className="space-y-4 text-xs text-foreground/60 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
-              <p>Ingeniera de Software & Diseñadora Creativa. Fusionando lógica y estética para construir experiencias digitales significativas.</p>
+              <p>{language === "en" ? "Software Engineer & Creative Designer. Merging logic and aesthetics to build meaningful digital experiences." : "Ingeniera de Software & Diseñadora Creativa. Fusionando lógica y estética para construir experiencias digitales significativas."}</p>
             </div>
             
             {/* Bat ornaments */}
@@ -30,14 +34,14 @@ export function Footer() {
           {/* Links column 1 */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-              <h4 className="text-xs font-bold text-primary uppercase tracking-[0.3em]">Navegación</h4>
+              <h4 className="text-xs font-bold text-primary uppercase tracking-[0.3em]">{language === "en" ? "Navigation" : "Navegación"}</h4>
               <div className="w-2 h-2 bg-primary rotate-45"></div>
             </div>
             <div className="space-y-4 text-xs uppercase tracking-widest font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
-              <p className="hover:text-primary cursor-pointer transition-colors duration-300">Inicio</p>
-              <p className="hover:text-primary cursor-pointer transition-colors duration-300">Sobre Mí</p>
-              <p className="hover:text-primary cursor-pointer transition-colors duration-300">Proyectos</p>
-              <p className="hover:text-primary cursor-pointer transition-colors duration-300">Testimonios</p>
+              <p className="hover:text-primary cursor-pointer transition-colors duration-300">{language === "en" ? "Home" : "Inicio"}</p>
+              <p className="hover:text-primary cursor-pointer transition-colors duration-300">{language === "en" ? "About Me" : "Sobre Mí"}</p>
+              <p className="hover:text-primary cursor-pointer transition-colors duration-300">{language === "en" ? "Projects" : "Proyectos"}</p>
+              <p className="hover:text-primary cursor-pointer transition-colors duration-300">{language === "en" ? "Testimonials" : "Testimonios"}</p>
             </div>
           </div>
           
@@ -54,31 +58,6 @@ export function Footer() {
             </div>
           </div>
           
-          {/* Newsletter/CTA column */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <h4 className="text-xs font-bold text-primary uppercase tracking-[0.3em]">Suscripción</h4>
-              <GothicCross size="sm" className="text-primary w-4 h-6" />
-            </div>
-            <div className="space-y-4">
-              <p className="text-[10px] text-foreground/50 uppercase tracking-widest">Recibe actualizaciones desde el abismo.</p>
-              
-              {/* Input field */}
-              <div className="relative h-12 border-2 border-primary/40 bg-background/50 hover:border-primary transition-all duration-300">
-                <input type="email" placeholder="TU EMAIL" className="w-full h-full bg-transparent px-4 text-[10px] tracking-widest uppercase focus:outline-none" />
-                <div className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 border border-primary flex items-center justify-center">
-                  <div className="w-3 h-px bg-primary"></div>
-                </div>
-              </div>
-              
-              {/* Submit button */}
-              <button className="relative w-full h-12 border-2 border-primary bg-primary text-primary-foreground text-[10px] font-bold tracking-widest uppercase hover:bg-accent transition-all duration-300 group overflow-hidden">
-                <span className="relative z-10">Unirse</span>
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                     style={{ boxShadow: '0 0 20px rgba(193, 18, 31, 0.6)' }}></div>
-              </button>
-            </div>
-          </div>
         </div>
         
         {/* Divider ornament */}

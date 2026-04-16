@@ -1,8 +1,11 @@
+"use client";
+
 import { CornerOrnament, DividerOrnament, GothicCross } from "./gothic/GothicOrnaments";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Github, Cloud } from "lucide-react";
+import { useLanguage } from "../language-context";
 
-const secondaryProjects = [
+const secondaryProjectsEs = [
   {
     title: "Procesador de Imágenes",
     description: "Servicio serverless en AWS que automatiza la conversión de imágenes a blanco y negro y la protección de contenido mediante marcas de agua.",
@@ -37,7 +40,45 @@ const secondaryProjects = [
   }
 ];
 
+const secondaryProjectsEn = [
+  {
+    title: "Image Processor",
+    description: "AWS serverless service that automates grayscale image conversion and content protection with watermarks.",
+    tech: ["AWS S3", "Lambda", "Pillow"],
+    image: "/aws.png",
+    link: "http://app-frontend-johana.s3-website-us-east-1.amazonaws.com/",
+    icon: "aws"
+  },
+  {
+    title: "UnicornWave",
+    description: "Unicorn Wave is a web music player: plays songs, manages playlists and favorites, and supports Spotify integration.",
+    tech: ["Next.js", "CSS", "TypeScript"],
+    image: "/music.png",
+    link: "https://github.com/johanagaviria19/unicornwave.git",
+    icon: "github"
+  },
+  {
+    title: "3D Calculator",
+    description: "3D calculator for geometric operations and transformations.",
+    tech: ["Javascript", "TypeScript", "CSS"],
+    image: "/Calculadorafoto.png",
+    link: "https://github.com/johanagaviria19/CalculadoraMultivariada.git",
+    icon: "github"
+  },
+  {
+    title: "MotorMingle",
+    description: "This project implements a REST API to manage vehicles using Java, Spring Boot, and MongoDB. It also includes a simple web view, controller tests, and optional Docker setup.",
+    tech: ["Java", "Javascript", "Spring Boot", "MongoDB", "TypeScript", "CSS"],
+    image: "/Car.png",
+    link: "https://github.com/johanagaviria19/MotorMingle.git",
+    icon: "github"
+  }
+];
+
 export function FeaturedProjects() {
+  const { language } = useLanguage();
+  const secondaryProjects = language === "en" ? secondaryProjectsEn : secondaryProjectsEs;
+
   return (
     <section id="projects" className="relative py-24 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[1400px] mx-auto">
@@ -50,7 +91,7 @@ export function FeaturedProjects() {
           </div>
           <div className="space-y-3" style={{ fontFamily: "'Playfair Display', serif" }}>
             <h2 className="text-4xl lg:text-5xl font-black text-foreground uppercase tracking-widest">
-              Reliquias <span className="text-primary italic">&</span> Proyectos
+              {language === "en" ? <>Relics <span className="text-primary italic">&</span> Projects</> : <>Reliquias <span className="text-primary italic">&</span> Proyectos</>}
             </h2>
           </div>
           <DividerOrnament className="mx-auto mt-8 text-primary opacity-60" />
@@ -66,7 +107,7 @@ export function FeaturedProjects() {
                 <div className="relative w-full aspect-[16/10] border-4 border-primary bg-card/80 overflow-hidden">
                   <ImageWithFallback 
                     src="/portafolio.png" 
-                    alt="Portafolio Principal"
+                    alt={language === "en" ? "Main Portfolio" : "Portafolio Principal"}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 opacity-50 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700"
                   />
                   {/* Corner ornaments */}
@@ -94,9 +135,9 @@ export function FeaturedProjects() {
               {/* Title - Gothic */}
               <div className="space-y-2" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
                 <h3 className="text-3xl font-black text-foreground uppercase tracking-tighter">
-                  Interfaces <span className="text-primary italic">Modernas</span>
+                  {language === "en" ? <>Modern <span className="text-primary italic">Interfaces</span></> : <>Interfaces <span className="text-primary italic">Modernas</span></>}
                 </h3>
-                <p className="text-sm font-medium tracking-widest text-primary/80 uppercase">Desarrollo Frontend & UX</p>
+                <p className="text-sm font-medium tracking-widest text-primary/80 uppercase">{language === "en" ? "Frontend Development & UX" : "Desarrollo Frontend & UX"}</p>
               </div>
               
               {/* Small divider */}
@@ -108,13 +149,13 @@ export function FeaturedProjects() {
               
               {/* Description */}
               <div className="space-y-4 text-foreground/70 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
-                <p>Desarrollo de interfaces web modernas con un enfoque obsesivo en la experiencia del usuario y la fluidez interactiva. Integración de lógica compleja con estética minimalista.</p>
-                <p className="text-xs font-bold text-primary uppercase tracking-widest italic">Rol: Diseño & Desarrollo</p>
+                <p>{language === "en" ? "Development of modern web interfaces with a strong focus on user experience and interaction fluidity. Integrating complex logic with minimalist aesthetics." : "Desarrollo de interfaces web modernas con un enfoque obsesivo en la experiencia del usuario y la fluidez interactiva. Integración de lógica compleja con estética minimalista."}</p>
+                <p className="text-xs font-bold text-primary uppercase tracking-widest italic">{language === "en" ? "Role: Design & Development" : "Rol: Diseño & Desarrollo"}</p>
               </div>
               
               {/* Tags with gothic style */}
               <div className="flex gap-2 flex-wrap">
-                {["React", "TypeScript", "Tailwind CSS", "Vite"].map((tag) => (
+                {["React", "TypeScript", "Tailwind CSS", "Next.js"].map((tag) => (
                   <span key={tag} className="px-3 py-1 border border-primary/40 text-[10px] font-bold tracking-widest uppercase text-primary hover:border-primary hover:bg-primary/10 transition-all duration-300">
                     {tag}
                   </span>
@@ -128,7 +169,7 @@ export function FeaturedProjects() {
                 rel="noopener noreferrer"
                 className="inline-block relative px-8 py-3 border-2 border-primary text-xs font-bold tracking-widest uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300 group overflow-hidden text-center"
               >
-                <span className="relative z-10">Ver Repositorio del Proyecto</span>
+                <span className="relative z-10">{language === "en" ? "View Project Repository" : "Ver Repositorio del Proyecto"}</span>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                      style={{ boxShadow: '0 0 30px rgba(193, 18, 31, 0.6)' }}></div>
               </a>
@@ -176,7 +217,7 @@ export function FeaturedProjects() {
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="ml-auto text-foreground/40 hover:text-primary transition-colors duration-300"
-                      aria-label={`Ver repositorio de ${project.title}`}
+                      aria-label={language === "en" ? `View repository for ${project.title}` : `Ver repositorio de ${project.title}`}
                     >
                       {project.icon === 'aws' ? <Cloud size={18} /> : <Github size={18} />}
                     </a>

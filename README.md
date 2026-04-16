@@ -1,3 +1,11 @@
 
   # Personal Portfolio Wireframe
-Link de Vercel : https://personalportfoliowireframe.vercel.app/
+
+  This is a code bundle for Personal Portfolio Wireframe. The original project is available at https://www.figma.com/design/9iUilgzMj6df7YZwrhDx1d/Personal-Portfolio-Wireframe.
+
+  ## Running the code
+
+  Run `npm i` to install the dependencies.
+
+  Run `npm run dev` to start the development server.
+  

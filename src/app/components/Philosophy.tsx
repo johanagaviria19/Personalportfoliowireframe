@@ -1,6 +1,10 @@
+"use client";
+
 import { GothicCross, DividerOrnament } from "./gothic/GothicOrnaments";
+import { useLanguage } from "../language-context";
 
 export function Philosophy() {
+  const { language } = useLanguage();
   return (
     <section id="philosophy" className="relative py-24 lg:py-32 px-6 lg:px-12 bg-background overflow-hidden">
       {/* Background decoration */}
@@ -12,16 +16,20 @@ export function Philosophy() {
         
         <div className="space-y-12">
           <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-[0.2em]" style={{ fontFamily: "'Cinzel Decorative', serif" }}>
-            Filosofía <span className="text-primary italic">Creativa</span>
+            {language === "en" ? <>Creative <span className="text-primary italic">Philosophy</span></> : <>Filosofía <span className="text-primary italic">Creativa</span></>}
           </h2>
           
           <div className="space-y-8 text-xl lg:text-2xl font-light leading-relaxed italic text-foreground/80" style={{ fontFamily: "'Playfair Display', serif" }}>
             <p className="relative">
               <span className="text-6xl text-primary absolute -top-8 -left-8 opacity-20">"</span>
-              El diseño no solo debe verse bien, debe sentirse. El código no solo debe funcionar, debe construir experiencias.
+              {language === "en"
+                ? "Design should not only look good, it should be felt. Code should not only work, it should build experiences."
+                : "El diseño no solo debe verse bien, debe sentirse. El código no solo debe funcionar, debe construir experiencias."}
             </p>
             <p>
-              Creo en la unión entre lo técnico y lo artístico como una forma de crear algo verdaderamente significativo.
+              {language === "en"
+                ? "I believe in the union of technical and artistic thinking as a way to create something truly meaningful."
+                : "Creo en la unión entre lo técnico y lo artístico como una forma de crear algo verdaderamente significativo."}
               <span className="text-6xl text-primary absolute -bottom-12 -right-8 opacity-20">"</span>
             </p>
           </div>
